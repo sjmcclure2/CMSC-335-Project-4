@@ -17,13 +17,6 @@ public class Ship extends Thing {
         this.jobs = new ArrayList<>();
     }
     
-    //Setters
-    private void setArrivalTime(PortTime arrivalTime) {
-        this.arrivalTime = arrivalTime;
-    }
-    private void setDockTime(PortTime dockTime) {
-        this.dockTime = dockTime;
-    }
     private void setDraft(double draft) {
         this.draft = draft;
     }

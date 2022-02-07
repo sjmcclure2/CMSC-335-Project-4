@@ -2,18 +2,15 @@ package seaportproject;
 
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
-import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
-import javax.swing.border.Border;
 
 public class Job extends Thing implements Runnable {
 
@@ -34,9 +31,6 @@ public class Job extends Thing implements Runnable {
     private boolean goFlag = false;
     private boolean noKillFlag = true;
     private boolean isComplete = false;
-    private Status status = Status.SUSPENDED;
-    private Border emptyBorder = BorderFactory.createEmptyBorder();
-
     public Job(HashMap<Integer, Ship> shipsMap, HashMap<Integer, Dock> docksMap, HashMap<Integer, SeaPort> portsMap, JPanel parentPanel, Scanner sc) {
         super(sc);
         if (sc.hasNextDouble()) {
@@ -102,7 +96,6 @@ public class Job extends Thing implements Runnable {
     } 
     
     private void showStatus(Status status) {
-        status = status;
         this.progressBar.setOpaque(true);
         switch (status) {
             case RUNNING:

@@ -2,10 +2,8 @@ package seaportproject;
 
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.lang.reflect.Method;
 import java.util.*;
 import javax.swing.JPanel;
-import javax.swing.tree.DefaultMutableTreeNode;
 
 final class World extends Thing {
 
@@ -32,10 +30,6 @@ final class World extends Thing {
     private void setPorts(ArrayList<SeaPort> ports) {
         this.ports = ports;
     }
-    private void setTime(PortTime time) {
-        this.time = time;
-    }
-
     // Getters
     protected ArrayList<Thing> getThings() {
         return this.things;
@@ -56,8 +50,6 @@ final class World extends Thing {
         docksMap = new HashMap<>();
         shipsMap = new HashMap<>();
         jobsMap = new HashMap<>();
-        
-        Ship parentShip;
         
         while (scannerContents.hasNextLine()) {
             lineString = scannerContents.nextLine().trim(); 

@@ -191,7 +191,7 @@ public class SeaPortProject extends JFrame {
                 this.mainTextArea.setText("" + this.world.toString()); 
             } catch (IOException ex) {
                 JOptionPane optionPane = new JOptionPane("Error", JOptionPane.ERROR_MESSAGE);    
-                JDialog dialog = optionPane.createDialog("Error: File is missing or corrupt.");
+                optionPane.createDialog("Error: File is missing or corrupt.");
             }
         } 
     }
